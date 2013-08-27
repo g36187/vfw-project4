@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<!-- Project 4 | Ruben Quizon | Term 1308 -->
+<head>
+	
+	<!-- Character Set Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="robots" value="index, follow"/>
+	<meta name="keywords" content="HTML,CSS,Bug-out"/>
+	<meta name="description" content="Add items to Bug-out bag"/>
+	<link rel="stylesheet" href="css/styles.css" />
+	<!-- Page Title -->
+	<title>Bug-out Bag Packing List -- Add An Item</title>
+</head>
+<body>
+	<!-- Page content lives here. -->
+	<div id="content">
+ 		<h1>Add an Item to your Bag</h1>
+		<form id="theForm">
+			<fieldset>
+				<legend>Input Items</legend>
+				Item type:
+				<select id="dropList">
+					<option value="Weapon">Weapon</option>
+					<option value="Armor">Armor</option>
+					<option value="Vehicle">Vehicle</option>
+					<option value="Food">Food</option>
+					<option value="Drink">Drink</option>
+					<option value="Tool">Tool</option>
+				</select>
+				<br>
+				Item name: <input type="text" name="ItemName" id="itemName" value="Baseball Bat">
+				<br>
+				How many: <input type="range" name="HowMany" min="1" max="5" id="howMany" value="1">
+				<br>
+				Can it be hand carried:
+				<input type="radio" name="handy" value="Yes" id="yes" checked="checked"/> <label for="yes">Yes</label>
+				<input type="radio" name="handy" value="No" id="no" /> <label for="no">No</label>
+				<br>
+				<textarea id="textNotes"> Use this space for special notes per item</textarea>
+				<br>
+<!--				<input type="button" value="Submit" id="submit"-->
+			</fieldset>
+			<input type="button" value="Submit" id="submit">
+		</form>
+		<a href="#" id="cleary">Clear Stored Data</a> <a href="#" id="displaya">Display Data</a>
+	</div>
+	<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

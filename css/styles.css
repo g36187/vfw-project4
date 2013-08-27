@@ -1,0 +1,17 @@
+/*
+
+Title: External CSS File
+By: Ruben Quizon | Visual Frameworks 1308
+For: CSS Selectors
+
+*/
+
+h1 {
+	color:#ffffff;
+	outline:#000000 solid 1px;
+	background:#003b6f;
+}
+
+h4 {
+	background:#599653;
+}

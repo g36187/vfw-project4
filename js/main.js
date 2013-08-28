@@ -73,6 +73,8 @@ function showYou(){
 		var obj = JSON.parse(value);
 		var addSubList = document.createElement('ul');
 		makeli.appendChild(addSubList);
+// add the icons corresponding to the item categories
+	putIcons(obj.itype[1],addSubList);
 // export date in pairs		
 		for (var n in obj){
 			var addSubli = document.createElement('li');
@@ -86,6 +88,15 @@ function showYou(){
 	}
 }	
 
+// icon picker for category images
+function putIcons(icoName, addSubList){
+	var iconLi = document.createElement('li');
+	addSubList.appendChild(iconLi);
+	var newIcon = document.createElement('img');
+	var setSrc = newIcon.setAttribute("src", "images/"+ icoName +".png");
+	iconLi.appendChild(newIcon);
+	
+}
 /* add the ability to edit / delete stored data */
 function createEditDelete(key, linkList){
 	var lineBreaker = document.createElement('br');

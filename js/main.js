@@ -43,8 +43,20 @@ function storeData(key){
 	alert("Information Submitted");
 }
 	
+/* Function to fill in data if local storage is empty */
+function dataFiller(){
+	for (var f in fillerData){
+		var id = Math.floor(Math.random()*9001);
+		localStorage.setItem(id, JSON.stringify(fillerData[f]));
+	}
+}	
+	
 /* extract data for show */
 function showYou(){
+	if(localStorage.length === 0){
+		alert("No Local Storage Data stored! Loading default data");
+		dataFiller();
+	}
 	var createDiv = document.createElement('div');
 	createDiv.setAttribute("id", "items");
 	var addList = document.createElement('ul');
